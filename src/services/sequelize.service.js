@@ -9,12 +9,8 @@ const modelFiles = fs
 const sequelizeService = {
   init: async () => {
     try {
-      let connection = new Sequelize(databaseConfig);
+      const connection = new Sequelize(databaseConfig);
 
-      /*
-        Loading models automatically
-      */
-     
       for (const file of modelFiles) {
         const model = await import(`../models/${file}`);
         model.default.init(connection);
@@ -24,6 +20,9 @@ const sequelizeService = {
         const model = await import(`../models/${file}`);
         model.default.associate && model.default.associate(connection.models);
       });
+
+      // Auto-create / update tables (safe for development & SQLite)
+      await connection.sync({ alter: true });
 
       console.log("[SEQUELIZE] Database service initialized");
     } catch (error) {

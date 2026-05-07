@@ -1,259 +1,274 @@
 {
-	"info": {
-		"_postman_id": "667c4085-5e85-4233-8e79-097c8a3faff7",
-		"name": "express-sequelize-boilerplate",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "user",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"Gabriel Faria\",\n    \"email\": \"gabriel@gmail.com\",\n    \"password\": \"123456\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{server_url}}/user",
-							"host": [
-								"{{server_url}}"
-							],
-							"path": [
-								"user"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\": \"Gabriel Alves de Faria\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{server_url}}/user",
-							"host": [
-								"{{server_url}}"
-							],
-							"path": [
-								"user"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{server_url}}/user",
-							"host": [
-								"{{server_url}}"
-							],
-							"path": [
-								"user"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "find",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{server_url}}/user/1",
-							"host": [
-								"{{server_url}}"
-							],
-							"path": [
-								"user",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{server_url}}/user/2",
-							"host": [
-								"{{server_url}}"
-							],
-							"path": [
-								"user",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "addAddress",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"address\": {\n        \"city\": \"Itajubá\",\n        \"state\": \"Minas Gerais\",\n        \"country\": \"Brasil\",\n        \"neighborhood\": \"Avenida\"\n    }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{server_url}}/user/address",
-							"host": [
-								"{{server_url}}"
-							],
-							"path": [
-								"user",
-								"address"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "login",
-			"item": [
-				{
-					"name": "login",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\":\"gabriel@gmail.com\",\n    \"password\":\"123456\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{server_url}}/login",
-							"host": [
-								"{{server_url}}"
-							],
-							"path": [
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "logout",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{server_url}}/logout",
-							"host": [
-								"{{server_url}}"
-							],
-							"path": [
-								"logout"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "address",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"city\": \"Itajubá\",\n    \"state\": \"Minas Gerais\",\n    \"country\": \"Brasil\",\n    \"neighborhood\": \"Avenida\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{server_url}}/address",
-							"host": [
-								"{{server_url}}"
-							],
-							"path": [
-								"address"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"protocolProfileBehavior": {}
-		}
-	],
-	"protocolProfileBehavior": {}
+  "info": {
+    "_postman_id": "splitwise-mvp-collection",
+    "name": "Splitwise MVP",
+    "description": "All API endpoints for the Splitwise MVP. Set the `base_url` variable to `http://localhost:3001`. Pass `x-user-id` header to identify the acting user (returned from login/register).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3001",
+      "type": "string"
+    },
+    {
+      "key": "user_id",
+      "value": "1",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Alice\",\n  \"email\": \"alice@example.com\",\n  \"password\": \"secret123\",\n  \"default_currency\": \"USD\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "{{base_url}}/users/register",
+              "host": ["{{base_url}}"],
+              "path": ["users", "register"]
+            },
+            "description": "Create a new user account. Returns the user object including the `id` to use as `x-user-id` in subsequent requests."
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"alice@example.com\",\n  \"password\": \"secret123\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "{{base_url}}/users/login",
+              "host": ["{{base_url}}"],
+              "path": ["users", "login"]
+            },
+            "description": "Login with email and password. Returns user_id — copy it into the `user_id` collection variable."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Profile",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "x-user-id", "value": "{{user_id}}" }],
+            "url": {
+              "raw": "{{base_url}}/users/profile",
+              "host": ["{{base_url}}"],
+              "path": ["users", "profile"]
+            },
+            "description": "Fetch the profile of the acting user."
+          },
+          "response": []
+        },
+        {
+          "name": "Update Profile",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "x-user-id", "value": "{{user_id}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"alice_new@example.com\",\n  \"default_currency\": \"EUR\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "{{base_url}}/users/profile",
+              "host": ["{{base_url}}"],
+              "path": ["users", "profile"]
+            },
+            "description": "Update email and/or default_currency for the acting user."
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Account",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "x-user-id", "value": "{{user_id}}" }],
+            "url": {
+              "raw": "{{base_url}}/users/profile",
+              "host": ["{{base_url}}"],
+              "path": ["users", "profile"]
+            },
+            "description": "Permanently delete the acting user's account."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Expenses",
+      "item": [
+        {
+          "name": "Add Expense",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "x-user-id", "value": "{{user_id}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Dinner\",\n  \"description\": \"Pizza night\",\n  \"value\": 90,\n  \"currency\": \"USD\",\n  \"date\": \"2026-05-07\",\n  \"members\": [\n    { \"user_id\": 1, \"share_amount\": 30 },\n    { \"user_id\": 2, \"share_amount\": 60 }\n  ]\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "{{base_url}}/expenses",
+              "host": ["{{base_url}}"],
+              "path": ["expenses"]
+            },
+            "description": "Add a new expense. The acting user (x-user-id) is the payer. `members` lists everyone splitting the bill with their share amounts — the sum must equal `value`."
+          },
+          "response": []
+        },
+        {
+          "name": "Get Expense",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "x-user-id", "value": "{{user_id}}" }],
+            "url": {
+              "raw": "{{base_url}}/expenses/1",
+              "host": ["{{base_url}}"],
+              "path": ["expenses", "1"]
+            },
+            "description": "Get details of a single expense. Only accessible by the payer or a participant."
+          },
+          "response": []
+        },
+        {
+          "name": "Update Expense",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "x-user-id", "value": "{{user_id}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Pizza Dinner\",\n  \"value\": 120,\n  \"members\": [\n    { \"user_id\": 1, \"share_amount\": 60 },\n    { \"user_id\": 2, \"share_amount\": 60 }\n  ]\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "{{base_url}}/expenses/1",
+              "host": ["{{base_url}}"],
+              "path": ["expenses", "1"]
+            },
+            "description": "Update an expense. Only the payer can do this. Providing `members` replaces all participants."
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Expense",
+          "request": {
+            "method": "DELETE",
+            "header": [{ "key": "x-user-id", "value": "{{user_id}}" }],
+            "url": {
+              "raw": "{{base_url}}/expenses/1",
+              "host": ["{{base_url}}"],
+              "path": ["expenses", "1"]
+            },
+            "description": "Delete an expense and all its participants. Only the payer can do this."
+          },
+          "response": []
+        },
+        {
+          "name": "Activity Log — Current Month",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "x-user-id", "value": "{{user_id}}" }],
+            "url": {
+              "raw": "{{base_url}}/expenses/activity?period=current_month",
+              "host": ["{{base_url}}"],
+              "path": ["expenses", "activity"],
+              "query": [{ "key": "period", "value": "current_month" }]
+            },
+            "description": "All expenses the user is involved in, grouped by current_month / last_month / older."
+          },
+          "response": []
+        },
+        {
+          "name": "Activity Log — Last Month",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "x-user-id", "value": "{{user_id}}" }],
+            "url": {
+              "raw": "{{base_url}}/expenses/activity?period=last_month",
+              "host": ["{{base_url}}"],
+              "path": ["expenses", "activity"],
+              "query": [{ "key": "period", "value": "last_month" }]
+            },
+            "description": "Filter activity to last month only (still grouped in the response)."
+          },
+          "response": []
+        },
+        {
+          "name": "Activity Log — Custom Range",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "x-user-id", "value": "{{user_id}}" }],
+            "url": {
+              "raw": "{{base_url}}/expenses/activity?period=custom&start_date=2026-04-01&end_date=2026-05-31",
+              "host": ["{{base_url}}"],
+              "path": ["expenses", "activity"],
+              "query": [
+                { "key": "period", "value": "custom" },
+                { "key": "start_date", "value": "2026-04-01" },
+                { "key": "end_date", "value": "2026-05-31" }
+              ]
+            },
+            "description": "Filter activity by a custom date range (YYYY-MM-DD). Requires both start_date and end_date."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Balances",
+      "item": [
+        {
+          "name": "View Balances",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "x-user-id", "value": "{{user_id}}" }],
+            "url": {
+              "raw": "{{base_url}}/balances",
+              "host": ["{{base_url}}"],
+              "path": ["balances"]
+            },
+            "description": "Get net balances for the acting user against all other users. Positive net = other user owes you. Negative net = you owe them."
+          },
+          "response": []
+        },
+        {
+          "name": "Send Monthly Report Email",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "x-user-id", "value": "{{user_id}}" }],
+            "url": {
+              "raw": "{{base_url}}/balances/report",
+              "host": ["{{base_url}}"],
+              "path": ["balances", "report"]
+            },
+            "description": "Send a monthly balance summary email to the acting user. In development (no SMTP configured), the response includes a `previewUrl` to view the email on Ethereal."
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
 }
